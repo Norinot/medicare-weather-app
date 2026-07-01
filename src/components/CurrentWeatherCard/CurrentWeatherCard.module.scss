@@ -1,0 +1,99 @@
+.currentBlock {
+  flex: 1 1 256px;
+  min-width: 224px;
+}
+
+.cityButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs);
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 0 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+}
+
+.statusText,
+.errorText {
+  margin-top: var(--space-sm);
+  font-size: 15px;
+}
+
+.errorText {
+  color: #ffe4e6;
+}
+
+.temperature {
+  margin-top: var(--space-sm);
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+}
+
+.condition {
+  margin-top: var(--space-xxs);
+  font-size: 16px;
+  opacity: 0.92;
+}
+
+.skeletonBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.skeletonTemperature,
+.skeletonCondition {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.16));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.loadingBlock {
+  margin-top: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: rgba(255, 255, 255, 0.95);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skeletonTemperature {
+  width: 160px;
+  min-height: 80px;
+  border-radius: var(--radius-lg);
+}
+
+.skeletonCondition {
+  width: 96px;
+  min-height: 16px;
+  border-radius: 999px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}

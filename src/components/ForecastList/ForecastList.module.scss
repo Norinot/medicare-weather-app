@@ -1,0 +1,91 @@
+.forecastBlock {
+  flex: 1 1 352px;
+}
+
+.forecastTitle {
+  margin-bottom: var(--space-sm);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.forecastRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 9px 0;
+  font-size: 15px;
+}
+
+.dayName {
+  width: 84px;
+  font-weight: 600;
+}
+
+.icon {
+  width: 28px;
+  text-align: center;
+}
+
+.precipitation {
+  width: 44px;
+  text-align: right;
+  opacity: 0.9;
+}
+
+.temperatures {
+  margin-left: auto;
+  font-weight: 500;
+}
+
+.skeletonDayName,
+.skeletonIcon,
+.skeletonPrecipitation,
+.skeletonTemps {
+  display: inline-block;
+  min-height: 16px;
+  height: 40px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.16));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.skeletonDayName {
+  width: 96px;
+}
+
+.skeletonIcon {
+  width: 44px;
+}
+
+.skeletonPrecipitation {
+  width: 44px;
+}
+
+.skeletonTemps {
+  width: 96px;
+  margin-left: auto;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .forecastRow {
+    font-size: 14px;
+  }
+
+  .dayName {
+    width: 72px;
+  }
+}
