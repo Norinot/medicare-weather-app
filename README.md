@@ -2,7 +2,7 @@
 
 A weather forecast frontend built with React, TypeScript, and Vite.
 
-A Live demo of the application is possible to view here: `medicare-test.norinot.hu`
+A Live demo of the application is possible to view here: [medicare-test.norinot.hu](https://medicare-test.norinot.hu)
 
 ## What it is
 
