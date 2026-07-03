@@ -2,6 +2,8 @@
 
 A weather forecast frontend built with React, TypeScript, and Vite.
 
+A Live demo of the application is possible to view here: `medicare-test.norinot.hu`
+
 ## What it is
 
 This app lets users search for a city and view current weather plus a 7-day forecast using the Open-Meteo API stack.
