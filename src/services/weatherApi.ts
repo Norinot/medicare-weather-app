@@ -1,8 +1,9 @@
 import type { GeoCity, WeatherForecastResponse } from "@/types/weather";
 
+// Could be moved to a .env, but felt unnecesarry. 
 const GEOCODING_BASE_URL = 'https://geocoding-api.open-meteo.com/v1/search';
 const FORECAST_BASE_URL = 'https://api.open-meteo.com/v1/forecast';
-const CACHE_TTL_MS = 5 * 60 * 1000;
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 min
 
 interface GeoSearchResponse {
   results?: GeoCity[];

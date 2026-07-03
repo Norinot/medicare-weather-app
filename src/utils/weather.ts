@@ -1,5 +1,8 @@
 import type { WeatherConditionMeta } from "@/types/weather";
 
+
+// Emojis are a lightweight built-in icon solution here.
+// For a larger app I would use dedicated SVG/icon assets and Vite aliases.
 const WEATHER_CODES: Record<number, WeatherConditionMeta> = {
   0: { label: "Tiszta idő", icon: "☀️" },
   1: { label: "Nagyrészt tiszta", icon: "🌤️" },

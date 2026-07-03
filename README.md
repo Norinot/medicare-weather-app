@@ -1,32 +1,65 @@
-# React + TypeScript + Vite
+# Medicare Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A weather forecast frontend built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## What it is
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This app lets users search for a city and view current weather plus a 7-day forecast using the Open-Meteo API stack.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Search for cities with Open-Meteo Geocoding
+- Select a city from search results
+- Show current weather for the selected city
+- Show 7-day forecast with temperature and precipitation data
+- Display a chart of future high temperatures
+- Persist selected city in browser local storage
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Install dependencies:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+Run tests:
+
+```bash
+npm test
+```
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+## Notes
+
+- The app opens a city selection modal automatically if no city is stored yet.
+- City data is saved under `weather-city` in local storage.
+- City search uses `https://geocoding-api.open-meteo.com/v1/search`.
+- Forecast data uses `https://api.open-meteo.com/v1/forecast`.
+
+## More Documentation
+
+See `docs.md` for a fuller explanation of the app, architecture, and APIs used.

@@ -29,9 +29,10 @@
 
 .temperature {
   margin-top: var(--space-sm);
-  font-size: clamp(48px, 6vw, 72px);
-  font-weight: 300;
-  line-height: 1.05;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
 }
 
 .condition {
